@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     x="0px" y="0px">
+	<defs>
+		<pattern id="planks" width="100%" height="20%" patternUnits="userSpaceOnUse">
+			<rect width="100%" height="1.7"></rect>
+		</pattern>
+		<filter id="grain2">
+			<feTurbulence baseFrequency="0.0025 0.05" numOctaves="1" />
+			<feColorMatrix values="4.2 1.8 0.3 -4.9 2.4 -1 0.8 3.9 2.4 4.7 2.2 0.2 -3.9 4.6 1.2 1.7 -3.7 -3 -4.9 0.6" />
+		</filter>
+		<filter id="cuts">
+			<feTurbulence baseFrequency="0.0009 0.003" numOctaves="10" />
+			<feColorMatrix values="1.6 2.6 3.4 1 5 1.5 4.8 2.1 3.3 5 1.6 3.1 4.1 0.6 3.7 2.8 4.8 0.6 2.3 -3.4" />
+		</filter>
+		<filter id="grain">
+			<feTurbulence baseFrequency="0.005 0.09" numOctaves="2" />
+			<feColorMatrix values="-0.7 -2.2 2.7 4.6 3 -0.4 5 2.4 2.9 -4.5 1.1 3.8 -0.6 -2.8 -0.8 1.3 -3.3 .2 -1.5 -0.2" />
+			<feDiffuseLighting lighting-color="#966F33" surfaceScale="4">
+				<feDistantLight azimuth="45" elevation="25" />
+			</feDiffuseLighting>
+		</filter>
+		<filter id="squiggle">
+			<feTurbulence baseFrequency="0.001" type="fractalNoise" numOctaves="1" />
+			<feDisplacementMap in="SourceGraphic" xChannelSelector="R" yChannelSelector="B" scale="23.5" />
+			<feGaussianBlur stdDeviation="0.8" />
+		</filter>
+	</defs>
+	<rect width="100%" height="100%" fill="#966F33" />
+	<rect width="100%" height="100%" filter="url(#grain)" />
+	<rect width="100%" height="100%" filter="url(#cuts)" style="opacity:0.04" />
+	<rect width="100%" height="100%" filter="url(#grain2)" style="opacity:0.08" />
+	<rect width="100%" height="100%" fill="url(#planks)" filter="url(#squiggle)" />
+</svg>

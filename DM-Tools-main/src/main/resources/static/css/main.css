@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+  
+	background-image: url( "/svg/planks.svg" );
+	font-family: 'MedievalSharp', cursive;
+}
+
+.bronze {
+	background-image: repeating-linear-gradient(90deg, #9C7A3C, #804A00, #967444, #895E1A, #B08D57, #844414, #895E1A, #9C7A3C, #967444, #804A00, #B08D57);
+	box-shadow: 2px 3px 20px black, 0 0 125px #8f5922 inset;
+	text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.3), 1px 1px 0px rgba(0, 0, 0, 0.8);
+	
+	font-weight: 900;
+}
+
+.parchment {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+ 	box-shadow: 2px 3px 20px black, 0 0 125px #8f5922 inset;
+	background: #fffef0;
+    filter: url(#wearify);
+}
+
+textarea {
+  background: transparent;
+  color: black;
+  resize: none;
+  border: double;
+  width: 100%;
+  font-size: 1.2rem;
+  height: 100%;
+  position: relative;
+}
+
+label {
+	font-size: 1.6rem;
+	color: darkred;
+}
+
+select {
+	background: transparent;
+	font-size: 1.2rem;
+	border: double;
+}
+
+input {
+	font-size: 1.2rem;
+	background: transparent;
+	border: double;
+}
+
+.viewnpcpage {
+	font-size: 1.2rem;
+}
+
+.viewnpcpage h4 {
+	font-size: 1.6rem;
+	color: darkred;
+}
+
